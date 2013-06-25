@@ -1,4 +1,8 @@
 OpenGl-demo
 ===========
 
-Simple opengl demo
+Simple OpenGL demo
+
+controls - wasd and arrows.
+
+License: GPL.
