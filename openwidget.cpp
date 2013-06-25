@@ -5,6 +5,7 @@ OpenWidget::OpenWidget(QWidget *parent) :
 {
     xRot = 0;
     yRot = 0;
+    step = 0.2;
     setMouseTracking(true);
     this->setCursor(QCursor(Qt::BlankCursor));
 }
@@ -68,6 +69,10 @@ void OpenWidget::keyPressEvent(QKeyEvent *ev) {
         xRot -= 5;
     else if (ev->key() == Qt::Key_Up)
         xRot += 5;
+    else if (ev->key() == Qt::Key_Minus)
+        step -= 0.01;
+    else if (ev->key() == Qt::Key_Plus)
+        step += 0.01;
 
     ev->accept();
     repaint();

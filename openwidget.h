@@ -7,8 +7,6 @@
 #include <QMouseEvent>
 #include <QKeyEvent>
 
-const double step = 0.3;
-
 class OpenWidget : public QGLWidget
 {
     Q_OBJECT
@@ -22,6 +20,7 @@ protected:
     void keyPressEvent(QKeyEvent *);
 private:
     double xRot, yRot;
+    double step;
     void setPos();
 signals:
     
